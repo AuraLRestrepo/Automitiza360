@@ -1,0 +1,48 @@
+.usecases {
+  padding-block: var(--space-16);
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.usecases__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.usecase-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  transition: border-color var(--transition-fast);
+}
+
+.usecase-chip:hover {
+  border-color: var(--color-accent);
+}
+
+.usecase-chip__icon {
+  font-size: var(--fs-xl);
+  flex-shrink: 0;
+}
+
+.usecase-chip h3 {
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-1);
+}
+
+.usecase-chip p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 800px) {
+  .usecases__grid {
+    grid-template-columns: 1fr;
+  }
+}

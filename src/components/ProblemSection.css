@@ -1,0 +1,44 @@
+.problems {
+  padding-block: var(--space-16);
+}
+
+.problems__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.problem-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.problem-card:hover {
+  border-color: var(--color-border-strong);
+  transform: translateY(-4px);
+}
+
+.problem-card__icon {
+  font-size: var(--fs-2xl);
+  display: inline-block;
+  margin-bottom: var(--space-4);
+}
+
+.problem-card h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-3);
+}
+
+.problem-card p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 800px) {
+  .problems__grid {
+    grid-template-columns: 1fr;
+  }
+}
